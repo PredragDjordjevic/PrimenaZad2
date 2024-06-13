@@ -11,7 +11,7 @@
         android:layout_height="41dp"
         android:background="#FF5722"
         android:gravity="center"
-        android:text="Dolar"
+        android:text="$"
         android:textColor="#673AB7"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +53,7 @@
         android:id="@+id/textView2"
         android:layout_width="199dp"
         android:layout_height="40dp"
-        android:background="#FFEB3B"
+        android:background="#AAAAA"
         android:gravity="center"
         android:text="Euro"
         android:textColor="#E91E63"
@@ -69,7 +69,7 @@
         android:id="@+id/textView3"
         android:layout_width="409dp"
         android:layout_height="44dp"
-        android:background="#EC3232"
+        android:background="#AAAAA"
         android:gravity="center"
         android:text="Kursevi valuta"
         android:textColor="#6D2FC3"
@@ -78,7 +78,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/evri"
         android:layout_width="180dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -89,7 +89,7 @@
         tools:layout_editor_absoluteY="171dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/dolari"
         android:layout_width="200dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -100,7 +100,7 @@
         tools:layout_editor_absoluteY="170dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/kurs_evro"
         android:layout_width="205dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -110,7 +110,7 @@
         tools:layout_editor_absoluteY="300dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/kurs_dolar"
         android:layout_width="199dp"
         android:layout_height="46dp"
         android:ems="10"
@@ -121,20 +121,42 @@
         tools:layout_editor_absoluteY="302dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/convertEuroButton"
         android:layout_width="229dp"
         android:layout_height="60dp"
         android:text="Konveruj eure u dinare"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="373dp" />
+        tools:layout_editor_absoluteY="373dp"
+        android:onClick="Konvertuj_e"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/convertDollarButton"
         android:layout_width="220dp"
         android:layout_height="59dp"
         android:text="Konvertuj dolare u dinare"
         tools:layout_editor_absoluteX="198dp"
-        tools:layout_editor_absoluteY="374dp" />
+        tools:layout_editor_absoluteY="374dp"
+        android:onClick="Konvertuj_d"/>
+
+    <TextView
+        android:id="@+id/resultEuroTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/resultDollarTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convertEuroButton" />
+
+    <TextView
+        android:id="@+id/resultDollarTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resultEuroTextView"
+        app:layout_constraintTop_toBottomOf="@+id/convertDollarButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

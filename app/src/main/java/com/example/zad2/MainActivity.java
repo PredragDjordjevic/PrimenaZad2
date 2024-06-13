@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        euroEditText = findViewById(R.id.euroEditText);
-        dollarEditText = findViewById(R.id.dollarEditText);
-        euroRateEditText = findViewById(R.id.euroRateEditText);
-        dollarRateEditText = findViewById(R.id.dollarRateEditText);
+        euroEditText = findViewById(R.id.evri);
+        dollarEditText = findViewById(R.id.dolari);
+        euroRateEditText = findViewById(R.id.kurs_evro);
+        dollarRateEditText = findViewById(R.id.kurs_dolar);
         resultEuroTextView = findViewById(R.id.resultEuroTextView);
         resultDollarTextView = findViewById(R.id.resultDollarTextView);
         convertEuroButton = findViewById(R.id.convertEuroButton);
